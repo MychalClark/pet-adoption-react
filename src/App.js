@@ -55,7 +55,7 @@ function App() {
             <Route path="/login" element={<LoginForm onLogin={onLogin} showError={showError} />} />
             <Route path="/pet/list" element={<PetList auth={auth} showError={showError} />} />
 
-            <Route path="/pet/:petId" element={<PetEditor/>}/>
+            <Route path="/pet/:petId" element={<PetEditor auth={auth} showError={showError}/>}/>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
